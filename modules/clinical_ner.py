@@ -1,7 +1,12 @@
 import spacy
 from typing import List, Dict
 
-nlp = spacy.load("en_core_web_sm")
+try:
+    try:
+    nlp = spacy.load("en_core_web_sm")
+except:
+    nlp = spacy.blank("en")
+
 
 MEDICAL_TERMS = {
     "DISEASE": [
