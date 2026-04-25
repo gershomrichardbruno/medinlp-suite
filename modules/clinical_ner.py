@@ -2,7 +2,6 @@ import spacy
 from typing import List, Dict
 
 try:
-    try:
     nlp = spacy.load("en_core_web_sm")
 except:
     nlp = spacy.blank("en")
@@ -10,16 +9,17 @@ except:
 
 MEDICAL_TERMS = {
     "DISEASE": [
-        "diabetes", "hypertension", "asthma", "pneumonia", "tuberculosis",
-        "covid", "cancer", "anemia", "migraine"
+        "diabetes", "hypertension", "asthma", "pneumonia",
+        "tuberculosis", "covid", "cancer", "anemia", "migraine"
     ],
     "SYMPTOM": [
-        "fever", "cough", "chest pain", "headache", "breathing difficulty",
-        "fatigue", "vomiting", "diarrhea", "dizziness"
+        "fever", "cough", "chest pain", "headache",
+        "breathing difficulty", "fatigue", "vomiting",
+        "diarrhea", "dizziness"
     ],
     "MEDICATION": [
-        "aspirin", "insulin", "metformin", "paracetamol", "amoxicillin",
-        "atorvastatin", "salbutamol"
+        "aspirin", "insulin", "metformin", "paracetamol",
+        "amoxicillin", "atorvastatin", "salbutamol"
     ],
     "PROCEDURE": [
         "x-ray", "ct scan", "mri", "ecg", "blood test", "surgery"
